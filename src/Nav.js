@@ -7,9 +7,9 @@ const [show, setShow] = useState(false);
 
 const transitionNavbar =()=>{
     if(window.scrollY > 100){
-        setShow(false);
-    }else{
         setShow(true);
+    }else{
+        setShow(false);
     }
 }
 
