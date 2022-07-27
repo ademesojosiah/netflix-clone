@@ -4,8 +4,7 @@ import './Nav.css'
 const Nav = () => {
 const [show, setShow] = useState(false);
 
-
-const transitionNavbar =()=>{
+const transitionNav =()=>{
     if(window.scrollY > 100){
         setShow(true);
     }else{
@@ -13,9 +12,13 @@ const transitionNavbar =()=>{
     }
 }
 
+
 useEffect(()=>{
-    window.addEventListener('scroll', transitionNavbar)
-    return ()=> window.removeEventListener('scroll', transitionNavbar)
+    window.addEventListener('scroll',transitionNav)
+
+    return ()=>{
+        window.removeEventListener('scroll',transitionNav)
+    }
 })
 
 
