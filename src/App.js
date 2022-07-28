@@ -6,17 +6,19 @@ import {
 } from "react-router-dom";
 import './App.css';
 import HomeScreen from './screens/HomeScreen';
+import LoginScreen from './screens/LoginScreen';
 
 
 
 function App() {
-  const user = null
+  const user = null;
   return (
     <div className="app">
     <Router>
-        <Routes>
+      {!user ? (<LoginScreen/>):( <Routes>
           <Route path="/" element={<HomeScreen/>} />
-        </Routes>
+        </Routes>)}
+       
     </Router>
 
     </div>
