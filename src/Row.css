@@ -3,6 +3,10 @@
     margin-left: 20px;
 }
 
+.row h2{
+    padding-top: 10px ;
+    padding-bottom: 10px ;
+}
 .row_posters{
     display: flex;
     overflow-y: hidden;
