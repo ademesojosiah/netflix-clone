@@ -11,7 +11,7 @@ const SignupScreen = () => {
         e.preventDefault();
         auth.signInWithEmailAndPassword(emailRef.current.value ,passwordRef.current.value)
         .then((authUser)=>{
-            console.log(authUser);
+            return <Homescreen />
         }).catch((error)=>{
             alert(error.message)
         })
