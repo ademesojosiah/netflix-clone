@@ -1,6 +1,7 @@
 import { auth } from '../firebase.js'
 import React, { useRef } from 'react';
-import './SignupScreen.css'
+import './SignupScreen.css';
+import HomeScreen from './HomeScreen';
 
 
 const SignupScreen = () => {
@@ -11,7 +12,7 @@ const SignupScreen = () => {
         e.preventDefault();
         auth.signInWithEmailAndPassword(emailRef.current.value ,passwordRef.current.value)
         .then((authUser)=>{
-            return <Homescreen />
+            return <HomeScreen />
         }).catch((error)=>{
             alert(error.message)
         })
