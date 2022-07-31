@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import {
   BrowserRouter as Router,
-  Routes,
-  Route
+  // Routes,
+  // Route
 } from "react-router-dom";
 import './App.css';
 import { auth } from './firebase';
@@ -31,7 +31,7 @@ function App() {
 
 
     return unsubscribe;
-  },[])
+  },[dispatch])
   return (
     <div className="app">
      
