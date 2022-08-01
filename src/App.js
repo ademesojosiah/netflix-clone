@@ -1,13 +1,14 @@
 import React, { useEffect } from 'react';
 import {
   BrowserRouter as Router,
-  // Routes,
-  // Route
+  Routes,
+  Route
 } from "react-router-dom";
 import './App.css';
 import { auth } from './firebase';
 import HomeScreen from './screens/HomeScreen';
 import LoginScreen from './screens/LoginScreen';
+import ProfileScreen from './screens/ProfileScreen';
 import {useDispatch, useSelector} from 'react-redux';
 import { login, logout, selectUser } from './features/userSlice';
 
@@ -25,7 +26,7 @@ function App() {
           email: userAuth.email
         }))
       }else{
-        dispatch(logout)
+        dispatch(logout())
       }
     });
 
@@ -37,9 +38,11 @@ function App() {
      
     <Router>
       {!user ? (<LoginScreen/>):(
-           <HomeScreen/>
-        )}
-       
+        <Routes>
+          <Route path='profile' element={<ProfileScreen />} />
+          <Route path='/'element={<HomeScreen/>} />
+       </Routes>
+       )}
     </Router>
 
     </div>

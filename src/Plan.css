@@ -1,0 +1,28 @@
+.plan{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.grey_button{
+    background-color: gray;
+    cursor: pointer;
+    padding: 6px 10px;
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+
+.plan_button{
+    cursor: pointer;
+    padding: 5px 8px;
+    color: #fff;
+    background-color: #e50914;
+    border: none;
+    font-size: 1rem;
+    font-weight: 400;
+}
