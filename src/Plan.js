@@ -7,7 +7,7 @@ const Plan = ({price , planType, subscribe}) => {
     const dispatch = useDispatch()
     useEffect(()=>{
         subscribe && dispatch(plan(planType)) 
-    },[dispatch]);
+    },[dispatch,subscribe,planType]);
   return (
     <div className='plan'>
         <div className="plan_details">
