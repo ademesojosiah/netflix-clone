@@ -17,7 +17,7 @@ const LoginScreen = () => {
                         <h3>Ready to watch ?, Enter your email to create or restart your membership</h3>
                     <div className="loginScreen_input">
                         <form>
-                            <input type="email" placeholder='Email Address' />
+                            <input type="email" placeholder='Email Address' className='inputt' />
                             <button className='loginScreen_getStarted' onClick={()=>setsignIn(true)} >GET STARTED</button>
                         </form> 
                     </div>

@@ -89,7 +89,7 @@
     margin: 10px;
 }
 
-.loginScreen_input input{
+.loginScreen_input .inputt{
     padding: 10px;
     outline: none;
     width:30% ;
